@@ -105,7 +105,7 @@ function abp_core_install() {
     ->save();
 
   // Save video hero file.
-  $module_path = \Drupal::service('extension.list.module')->getPath(abp_core');
+  $module_path = \Drupal::service('extension.list.module')->getPath('abp_core');
   $video_path = $module_path . '/videos/church-hero.mp4';
   $data = file_get_contents($video_path);
   $file = \Drupal::service('file.repository')->writeData($data, 'public://church-hero.mp4', FileSystemInterface::EXISTS_REPLACE);
