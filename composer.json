@@ -1,0 +1,25 @@
+{
+  "name": "drupal/abp_core",
+  "description": "ABP core configuration (blocks, content, views).",
+  "type": "drupal-module",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "Drupal",
+    "abp"
+  ],
+  "homepage": "https://github.com/sony2/abp_core",
+  "authors": [
+    {
+      "name": "Oscar",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://github.com/sony2/abp_core",
+    "source": "https://github.com/sony2/abp_core"
+  },
+  "require": {
+    "drupal/core": "^9.3 || ^10"
+  }
+}
