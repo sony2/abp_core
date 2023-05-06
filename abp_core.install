@@ -34,7 +34,7 @@ function abp_core_install() {
     'info' => 'Address',
     'uuid' => 'c0b5b8a1-5b1f-4b1f-9b1f-5b1f4b1f9b1f',
     'body' => [
-      'value' => '<h5>Our Address</h5><p>Envato Pty Ltd, 13/2<br>Elizabeth St Melbourne VIC 3000<br>Phone: (03) 8376 6284<br>Fax: (03) 8376 6285</p><h5>Another Address</h5><p>Envato Pty Ltd, 13/2<br>Elizabeth St Melbourne VIC 3000<br>Phone: (03) 8376 6284<br>Fax: (03) 8376 6285</p>',
+      'value' => '<h5>DATOS DE CONTACTO</h5><p>c/ Doctor Victoriano Juaristi nº 8 bajo</p>',
       'format' => 'full_html',
     ],
   ]);
@@ -184,9 +184,9 @@ function abp_core_install() {
   $block = BlockContent::create([
     'type' => 'quote',
     'info' => 'Homepage Quote block',
-    'field_summary' => 'For God so loved the world that he gave his one and only begotten Son, that who ever believes in him shall not perish but have eternal life.',
+    'field_summary' => 'Declarado el Belenismo como Manifestación Representativa del Patrimonio Cultural Inmaterial',
     'uuid' => '9a6dcb9c-f27e-4c8e-afc3-b9028d38bce2',
-    'field_author' => 'John 3:16 (KJV)',
+    'field_author' => 'BOE de 15 de junio de 2022',
   ]);
 
   $block->save();
@@ -232,18 +232,18 @@ function abp_core_install() {
     'type' => 'hero',
     'info' => 'Homepage Hero Video',
     'uuid' => '78fa9985-e444-48aa-baec-a0ddd5674a35',
-    'field_title' => 'Grace and Truth',
+    'field_title' => 'Asociación de Belenistas de Pamplona',
     'body' => [
-      'value' => 'For God did not send his Son into the world to condemn the world, but to save the world through him. John 3:17',
+      'value' => 'Desde 1953 haciendo belenes',
       'format' => 'full_html',
     ],
     'field_link' => [
       'uri' => 'https://www.drupal.org',
-      'title' => 'Browse Gallery',
+      'title' => 'Ver galería',
     ],
     'field_image' => [
       'target_id' => $media_files['Hero']->id(),
-      'alt' => 'Church building',
+      'alt' => 'ABP',
     ],
     'field_video' => [
       'target_id' => $media_files['Video']->id(),
@@ -294,13 +294,13 @@ function abp_core_install() {
   // Create 404 page.
   $node = Node::create([
     'type' => 'page',
-    'title' => 'Page not found',
+    'title' => 'Página no encontrada',
     'uid' => 1,
     'status' => 1,
     'promote' => 1,
     'sticky' => 1,
     'body' => [
-      'value' => 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.',
+      'value' => 'La página que estas buscando no existe.',
       'format' => 'full_html',
     ],
     'path' => [
@@ -313,13 +313,13 @@ function abp_core_install() {
   // Create 403 page.
   $node = Node::create([
     'type' => 'page',
-    'title' => 'Access denied',
+    'title' => 'Acceso denegado',
     'uid' => 1,
     'status' => 1,
     'promote' => 1,
     'sticky' => 1,
     'body' => [
-      'value' => 'You are not authorized to access this page.',
+      'value' => 'No estás autorizado a acceder esta página.',
       'format' => 'full_html',
     ],
     'path' => [
@@ -338,7 +338,7 @@ function abp_core_install() {
   // Create homepage basic node.
   $node = Node::create([
     'type' => 'page',
-    'title' => 'Welcome!',
+    'title' => 'Inicio',
     'uid' => 1,
     'status' => 1,
     'promote' => 1,
@@ -348,7 +348,7 @@ function abp_core_install() {
       'format' => 'full_html',
     ],
     'path' => [
-      'alias' => '/welcome',
+      'alias' => '/inicio',
     ],
   ]);
 
@@ -379,43 +379,131 @@ function abp_core_install() {
   // Create About us basic page.
   $node = Node::create([
     'type' => 'page',
-    'title' => 'About us',
+    'title' => 'Conócenos',
     'uid' => 1,
     'status' => 1,
     'body' => [
-      'value' => '<p> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. </p> <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. </p> <p> Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. </p> <h4> Sub-heading </h4> <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p> <p> Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa. </p> <h4> Another Heading </h4> <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa. </p> <p> Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa. </p>',
+      'value' => '<p class="p1">En el año 1963 la Asociación de Belenistas de Pamplona es cofundadora de la&nbsp;<a href="http://www.anunciata.es/"><span class="s1">Federación Española de Belenistas</span></a>. Esta entidad encarga a los Belenistas de Pamplona la organización en los años 1964, 1972, 1979, 1988 y 2000 de los Congresos Nacionales Belenistas.</p><p class="p1">En 1997 fundó, junto a otras asociaciones navarras la Federación de Belenistas de Navarra, Fe.Be.Na., para fomentar el asociacionismo belenista en la Comunidad Foral.</p><p class="p1">La mayor dificultad con que ha tropezado la Asociación de Belenistas de Pamplona ha sido la de no disponer de un local estable para sala de exposiciones, que han debido ser itinerantes por diversos locales y salas de Pamplona. Esta carencia finalizó en el año 1982, cuando el Arzobispado de Pamplona, gracias a la buena disposición de la Parroquia de Cristo Rey y su equipo sacerdotal, cedió "a precario" a los Belenistas el uso como taller y local de exposiciones de la Cripta de la Iglesia de Cristo Rey de Pamplona. Un local de más de 500 m2 con 14 dioramas de tres metros por tres metros donde poder realizar nuestras exposiciones. Esa navidad se expusieron los primeros belenes en este local.</p><p class="p1">En esta sala, que los belenistas llamamos cariñosamente "Belén", visitan la exposición unas 60 mil personas cada Navidad. La posibilidad de disponer de un local con su taller durante todo el año posibilitó que las actividades de la asociación se multiplicaran. Aumentó el número de socios y para 1985 éramos 202. Se empezó a editar el boletín AUZOLAN BELENISTA con información para todos los socios y que difundimos a todas las asociaciones belenistas que conocemos.</p><p class="p1">En el año 2009 abandonamos, por causas ajenas a nuestra voluntad, el local de Cristo Rey y empezamos nuestro peregrinaje. Al fin conseguimos adquirir, gracias al esfuerzo de nuestros socios, un amplio local en Pamplona que nos permite mantener las actividades que tradicionalmente realizamos. Desde la construcción de belenes hasta los cursos de belenismo y el resto de actividades.</p><p class="p1">&nbsp;Otra cosa fue mantener la exposición. El trabajo fue duro pero, afortunadamente, hemos encontrado un nuevo local para las navidades. El Palacio de Congresos y Auditorio de Navarra, Baluarte, donde en 1000 metros cuadrados exponemos doce grandes belenes y un sinfín de arquetas y belenes de menor tamaño. Llevamos tres navidades y el número de visitantes sigue alrededor de 30.000 personas en el mes escaso que dura la campaña. El resto de belenes repartidos por toda la ciudad se mantienen como siempre, en salas de cultura, en locales de ocio, en ayuntamientos próximos a Pamplona, en organismos oficiales, etc.</p><p class="p1">A la Asociación de Belenistas de Pamplona pertenecen en la actualidad más de 600 socios. Se realizan actividades como convivencias belenistas, cursillos de técnica belenista, excursiones por Navarra y visitas a belenes y asociaciones belenistas de toda la geografía nacional.</p><p class="p1">Al primer Presidente D. Angel Mª Pueyo Bonet (1.953 - 1.957) sucedieron D. Eliso Ijalba Lángara (1.957 - 1973), D. Manuel Mª Castells (1.973 - 2.000), D. José Miguel Tabar Primicia (2.000 - 2.004),&nbsp;D. José Mª Valgañón Ruiz (2.004 - 2.011), D. Jesús María Gómara Arraiza (2.011 - 2.018) y&nbsp; D. Pedro Javier Martínez Barbarin (2018 hasta hoy).</p><p class="p1">En el año 2000 y en el mes de octubre, nuestra ciudad acogió a los congresistas que participaron al XVI Congreso Internacional Belenista "Aleluya 2000" y al XXXVIII Congreso Nacional, con una asistencia de más de 400 congresistas y con exposiciones de belenes en la Ciudadela, Planetario, Museo de Navarra y Asociación de Belenistas.</p><p class="p1">La repercusión que a nivel nacional e internacional tuvieron los citados congresos se recogió a través de comunicaciones de los diferentes países asistentes agradeciendo la organización y la hospitalidad de nuestro pueblo.</p><p class="p1">Durante los últimos veinte años han sido más de cien personas cada año las que han pasado por nuestros cursos de iniciación al Belenismo. Además, más de 5000 niños de colegios navarros pasan por la exposición en su horario escolar durante la campaña.</p>',
       'format' => 'full_html',
     ],
     'path' => [
-      'alias' => '/about-us',
+      'alias' => '/conocenos',
     ],
   ]);
 
   $node->save();
 
-  $tag_names = [
-    'church',
-    'catholic',
-    'bulletin',
-    'programs',
-    'events',
-    'charity',
-    'website',
-    'no-profit',
-    'belief',
-    'ministry',
-    'sermon',
-    'nature',
-  ];
+  $artesanos_names = [
+    'Alfonso Rodríguez',
+    'Ángel Garayoa'.
+    'Heide',
+    'Hermanos Castells',
+    'Hermanos Cerrada'.
+    'Ignacio Fernández',
+    'José Luis Mayo',
+    'Luis García',
+    'Martino Landi',
+    'Montserrat Ribes',
+    'Oliver',
+    'Sandrini',
+    'Talleres de Arte Cristiano de Olot',
+  ]
 
-  // Create tags.
-  foreach ($tag_names as $tag_name) {
+  // Create artesanos.
+  foreach ($artesanos_names as $term_name) {
     $term = Term::create([
-      'vid' => 'tags',
-      'name' => $tag_name,
+      'vid' => 'Artesanos de Figuras',
+      'name' => $term_name,
     ]);
     $term->save();
-    $tag_ids[] = $term->id();
+    $artesanos_ids[] = $term->id();
+  }
+
+  $years_names = [
+    '2023',
+    '2022'.
+    '2021',
+    '2020',
+  ]
+
+  // Create años.
+  foreach ($years_names as $term_name) {
+    $term = Term::create([
+      'vid' => 'Año Belén',
+      'name' => $term_name,
+    ]);
+    $term->save();
+    $years_ids[] = $term->id();
+  }
+
+  $sizes_names = [
+    '3 m x 4 m',
+    '2,7 m x 2,7 m'.
+    '2 m x 3 m',
+    '2 m x 2 m',
+    '2 m x 1 m',
+    '1 m x 1 m',
+    '120 cm x 75 cm',
+    '80 cm x 50 cm',
+  ]
+
+  // Create tamaño belén.
+  foreach ($sizes_names as $term_name) {
+    $term = Term::create([
+      'vid' => 'Tamaño Belén',
+      'name' => $term_name,
+    ]);
+    $term->save();
+    $sizes_ids[] = $term->id();
+  }
+
+  $fsizes_names = [
+    '5 cm',
+    '6 cm',
+    '7 cm',
+    '8 cm',
+    '9 cm',
+    '10 cm',
+    '11 cm',
+    '12 cm',
+    '14 cm',
+    '15 cm',
+    '16 cm',
+    '18 cm',
+    '19 cm',
+    '20 cm',
+    '22 cm',
+    '24 cm',
+    '26 cm',
+    '28 cm',
+    '30 cm',
+    'varios',
+  ]
+
+  // Create Tamaño Figuras Belén.
+  foreach ($fsizes_names as $term_name) {
+    $term = Term::create([
+      'vid' => 'Tamaño Figuras Belén',
+      'name' => $term_name,
+    ]);
+    $term->save();
+    $fsizes_ids[] = $term->id();
+  }
+
+  $types_names = [
+    'Arqueta',
+    'Cuadro'.
+    'Exento',
+  ]
+
+  // Create Tipo Belén.
+  foreach ($types_names as $term_name) {
+    $term = Term::create([
+      'vid' => 'Tipo Belén',
+      'name' => $term_name,
+    ]);
+    $term->save();
+    $types_ids[] = $term->id();
   }
 
   $x = $y = 0;

@@ -1,0 +1,39 @@
+uuid: 4c9ad1de-0d2b-4f95-a59d-7148c6240fe6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.belen.card
+    - field.field.node.belen.body
+    - field.field.node.belen.field_date
+    - field.field.node.belen.field_image
+    - field.field.node.belen.field_link
+    - field.field.node.belen.field_location
+    - field.field.node.belen.field_tags
+    - node.type.belen
+  module:
+    - datetime
+    - user
+_core:
+  default_config_hash: _SXCTLctJ7Js9JS42gD85lMa8JH7HJeWQI3pBtfOFn8
+id: node.belen.card
+targetEntityType: node
+bundle: belen
+mode: card
+content:
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_image: true
+  field_link: true
+  field_location: true
+  field_tags: true
+  links: true

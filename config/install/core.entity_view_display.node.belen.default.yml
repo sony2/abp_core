@@ -1,0 +1,59 @@
+uuid: b4ec8857-6d14-4fc5-9905-b5cfbc90205b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.belen.body
+    - field.field.node.belen.field_date
+    - field.field.node.belen.field_image
+    - field.field.node.belen.field_link
+    - field.field.node.belen.field_location
+    - field.field.node.belen.field_tags
+    - image.style.interior_1024x439
+    - node.type.belen
+  module:
+    - image
+    - text
+    - user
+_core:
+  default_config_hash: c-T4RlTKkR2LGpFx6ZGjqc6p_YSLgD3twxoxoISh_WU
+id: node.belen.default
+targetEntityType: node
+bundle: belen
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: interior_1024x439
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_date: true
+  field_link: true
+  field_location: true
