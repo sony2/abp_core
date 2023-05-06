@@ -1,0 +1,28 @@
+uuid: 28a2cee4-1258-446b-8f80-8a3fcca13c34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_foto_principal
+    - node.type.belen
+id: node.belen.field_foto_principal
+field_name: field_foto_principal
+entity_type: node
+bundle: belen
+label: 'Foto principal'
+description: 'Foto principal del Belén'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings: 
+    target_bundles: 
+      image: image
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

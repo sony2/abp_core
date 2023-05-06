@@ -1,0 +1,29 @@
+uuid: 60ba68d9-8101-4366-bed6-17d51dc39a2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tamano_figuras_belen
+    - node.type.belen
+    - taxonomy.vocabulary.tags
+id: node.belen.field_tamano_figuras_belen
+field_name: field_tamano_figuras_belen
+entity_type: node
+bundle: belen
+label: 'Tamaños de las figuras del Belén'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

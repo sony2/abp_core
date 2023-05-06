@@ -1,26 +1,25 @@
-uuid: b7081af6-443f-449e-87b3-ff49cc7e2235
+uuid: 069d51fb-4a89-4ac2-8c9b-cab5e3e8efd2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_tags
+    - field.storage.node.field_video_belen
     - node.type.belen
-    - taxonomy.vocabulary.tags
-id: node.belen.field_tags
-field_name: field_tags
+id: node.belen.field_video_belen
+field_name: field_video_belen
 entity_type: node
 bundle: belen
-label: Tags
-description: ''
-required: false
+label: 'Video'
+description: 'Video del Belén'
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
-  handler_settings:
-    target_bundles:
-      tags: tags
+  handler: 'default:media'
+  handler_settings: 
+    target_bundles: 
+      image: image
     sort:
       field: name
       direction: asc

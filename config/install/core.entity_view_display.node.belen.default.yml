@@ -4,11 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.belen.body
-    - field.field.node.belen.field_date
-    - field.field.node.belen.field_image
-    - field.field.node.belen.field_link
-    - field.field.node.belen.field_location
-    - field.field.node.belen.field_tags
+    - field.field.node.belen.field_foto_principal
+    - field.field.node.belen.field_escena
+    - field.field.node.belen.field_tipo_belen
+    - field.field.node.belen.field_tamano_belen
+    - field.field.node.belen.field_ano_belen
+    - field.field.node.belen.field_artesanos_figuras
+    - field.field.node.belen.field_tamano_figuras_belen
+    - field.field.node.belen.field_galeria
+    - field.field.node.belen.field_video_belen
     - image.style.interior_1024x439
     - node.type.belen
   module:

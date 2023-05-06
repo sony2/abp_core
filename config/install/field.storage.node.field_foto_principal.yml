@@ -1,0 +1,20 @@
+uuid: 2b29ca4f-f033-4b8c-b46f-2afa1d16c354
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_foto_principal
+field_name: field_foto_principal
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,28 @@
+uuid: aaf0c49a-0cd8-4568-bae6-ab29e8ace9dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_galeria
+    - node.type.belen
+id: node.belen.field_galeria
+field_name: field_galeria
+entity_type: node
+bundle: belen
+label: 'Galería'
+description: 'Galería de fotos del Belén'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings: 
+    target_bundles: 
+      image: image
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
