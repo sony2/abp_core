@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      tags: tags
+      tags: artesanos_figuras
     sort:
       field: name
       direction: asc
