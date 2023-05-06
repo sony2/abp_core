@@ -539,7 +539,7 @@ function abp_core_install() {
 
   $location_names = [
     'Baluarte',
-    'Ayuntamiento'.
+    'Ayuntamiento',
   ];
 
   $voc = Vocabulary::create([
@@ -547,7 +547,7 @@ function abp_core_install() {
     'name' => "Localización de Belén",
   ]);
   $voc->save();
-  
+
   // Create Locations.
   foreach ($location_names as $term_name) {
     $term = Term::create([
