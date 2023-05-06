@@ -33,18 +33,7 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_image:
-    type: image
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: interior_1024x439
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_tags:
+  field_ano_belen:
     type: entity_reference_label
     label: hidden
     settings:
@@ -52,12 +41,12 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
-  field_date: true
-  field_link: true
-  field_location: true
+  field_foto_principal: true
+  field_escena: true
+  field_tipo_belen: true
+  field_tamano_belen: true
+  field_artesanos_figuras: true
+  field_tamano_figuras_belen: true
+  field_galeria: true
+  field_video_belen: true
