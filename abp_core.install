@@ -11,6 +11,7 @@ use Drupal\node\Entity\Node;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\taxonomy\Entity\Term;
+use Drupal\taxonomy\Entity\Vocabulary;
 use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\contact\Entity\ContactForm;
 
@@ -409,6 +410,12 @@ function abp_core_install() {
     'Talleres de Arte Cristiano de Olot',
   ];
 
+  $voc = Vocabulary::create([
+    'vid' => 'artesanos_figuras',
+    'name' => "Artesanos de Figuras",
+  ]);
+  $voc->save();
+
   // Create artesanos.
   foreach ($artesanos_names as $term_name) {
     $term = Term::create([
@@ -425,6 +432,12 @@ function abp_core_install() {
     '2021',
     '2020',
   ];
+
+  $voc = Vocabulary::create([
+    'vid' => 'ano_belen',
+    'name' => "Año del Belén",
+  ]);
+  $voc->save();
 
   // Create años.
   foreach ($years_names as $term_name) {
@@ -446,6 +459,12 @@ function abp_core_install() {
     '120 cm x 75 cm',
     '80 cm x 50 cm',
   ];
+
+  $voc = Vocabulary::create([
+    'vid' => 'tamano_belen',
+    'name' => "Tamaño del Belén",
+  ]);
+  $voc->save();
 
   // Create tamaño belén.
   foreach ($sizes_names as $term_name) {
@@ -480,6 +499,12 @@ function abp_core_install() {
     'varios',
   ];
 
+  $voc = Vocabulary::create([
+    'vid' => 'tamano_figuras_belen',
+    'name' => "Tamaño de las figuras del Belén",
+  ]);
+  $voc->save();
+
   // Create Tamaño Figuras Belén.
   foreach ($fsizes_names as $term_name) {
     $term = Term::create([
@@ -496,10 +521,37 @@ function abp_core_install() {
     'Exento',
   ];
 
+  $voc = Vocabulary::create([
+    'vid' => 'tipo_belen',
+    'name' => "Tipo de Belén",
+  ]);
+  $voc->save();
+
   // Create Tipo Belén.
   foreach ($types_names as $term_name) {
     $term = Term::create([
       'vid' => 'tipo_belen',
+      'name' => $term_name,
+    ]);
+    $term->save();
+    $types_ids[] = $term->id();
+  }
+
+  $location_names = [
+    'Baluarte',
+    'Ayuntamiento'.
+  ];
+
+  $voc = Vocabulary::create([
+    'vid' => 'localizacion_belen',
+    'name' => "Localización de Belén",
+  ]);
+  $voc->save();
+  
+  // Create Locations.
+  foreach ($location_names as $term_name) {
+    $term = Term::create([
+      'vid' => 'localizacion_belen',
       'name' => $term_name,
     ]);
     $term->save();

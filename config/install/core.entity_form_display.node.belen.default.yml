@@ -4,13 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.belen.body
-    - field.field.node.belen.field_foto_principal
-    - field.field.node.belen.field_escena
+    - field.field.node.belen.field_ano_belen
     - field.field.node.belen.field_tipo_belen
     - field.field.node.belen.field_tamano_belen
-    - field.field.node.belen.field_ano_belen
+    - field.field.node.belen.field_foto_principal
+    - field.field.node.belen.field_escena
     - field.field.node.belen.field_artesanos_figuras
     - field.field.node.belen.field_tamano_figuras_belen
+    - field.field.node.belen.field_localizacion_belen
     - field.field.node.belen.field_galeria
     - field.field.node.belen.field_video_belen
     - image.style.thumbnail
@@ -44,14 +45,14 @@ content:
     third_party_settings: {  }
   field_foto_principal:
     type: media_library_widget
-    weight: 26
+    weight: 18
     region: content
     settings:
       media_types: {}
     third_party_settings: {  }
   field_escena:
     type: entity_reference_autocomplete
-    weight: 12
+    weight: 20
     region: content
     settings:
       match_operator: CONTAINS
@@ -61,7 +62,7 @@ content:
     third_party_settings: {  }
   field_tipo_belen:
     type: entity_reference_autocomplete
-    weight: 12
+    weight: 14
     region: content
     settings:
       match_operator: CONTAINS
@@ -71,7 +72,7 @@ content:
     third_party_settings: {  }
   field_tamano_belen:
     type: entity_reference_autocomplete
-    weight: 12
+    weight: 16
     region: content
     settings:
       match_operator: CONTAINS
@@ -91,7 +92,27 @@ content:
     third_party_settings: {  }
   field_artesanos_figuras:
     type: entity_reference_autocomplete
-    weight: 12
+    weight: 22
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tamano_figuras_belen:
+    type: entity_reference_autocomplete
+    weight: 24
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_localizacion_belen:
+    type: entity_reference_autocomplete
+    weight: 25
     region: content
     settings:
       match_operator: CONTAINS
