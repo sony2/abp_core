@@ -4,16 +4,16 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.node.belen.body
-    - field.node.belen.field_foto_principal
-    - field.node.belen.field_escena
-    - field.node.belen.field_tipo_belen
-    - field.node.belen.field_tamano_belen
-    - field.node.belen.field_ano_belen
-    - field.node.belen.field_artesanos_figuras
-    - field.node.belen.field_tamano_figuras_belen
-    - field.node.belen.field_galeria
-    - field.node.belen.field_video_belen
+    - field.field.node.belen.body
+    - field.field.node.belen.field_foto_principal
+    - field.field.node.belen.field_escena
+    - field.field.node.belen.field_tipo_belen
+    - field.field.node.belen.field_tamano_belen
+    - field.field.node.belen.field_ano_belen
+    - field.field.node.belen.field_artesanos_figuras
+    - field.field.node.belen.field_tamano_figuras_belen
+    - field.field.node.belen.field_galeria
+    - field.field.node.belen.field_video_belen
     - image.style.medium
     - node.type.belen
   module:
