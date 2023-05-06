@@ -412,7 +412,7 @@ function abp_core_install() {
   // Create artesanos.
   foreach ($artesanos_names as $term_name) {
     $term = Term::create([
-      'vid' => 'Artesanos de Figuras',
+      'vid' => 'artesanos_figuras',
       'name' => $term_name,
     ]);
     $term->save();
@@ -429,7 +429,7 @@ function abp_core_install() {
   // Create años.
   foreach ($years_names as $term_name) {
     $term = Term::create([
-      'vid' => 'Año Belén',
+      'vid' => 'ano_belen',
       'name' => $term_name,
     ]);
     $term->save();
@@ -450,7 +450,7 @@ function abp_core_install() {
   // Create tamaño belén.
   foreach ($sizes_names as $term_name) {
     $term = Term::create([
-      'vid' => 'Tamaño Belén',
+      'vid' => 'tamano_belen',
       'name' => $term_name,
     ]);
     $term->save();
@@ -483,7 +483,7 @@ function abp_core_install() {
   // Create Tamaño Figuras Belén.
   foreach ($fsizes_names as $term_name) {
     $term = Term::create([
-      'vid' => 'Tamaño Figuras Belén',
+      'vid' => 'tamano_figuras_belen',
       'name' => $term_name,
     ]);
     $term->save();
@@ -499,7 +499,7 @@ function abp_core_install() {
   // Create Tipo Belén.
   foreach ($types_names as $term_name) {
     $term = Term::create([
-      'vid' => 'Tipo Belén',
+      'vid' => 'tipo_belen',
       'name' => $term_name,
     ]);
     $term->save();
