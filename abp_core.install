@@ -407,7 +407,7 @@ function abp_core_install() {
     'Oliver',
     'Sandrini',
     'Talleres de Arte Cristiano de Olot',
-  ]
+  ];
 
   // Create artesanos.
   foreach ($artesanos_names as $term_name) {
@@ -424,7 +424,7 @@ function abp_core_install() {
     '2022'.
     '2021',
     '2020',
-  ]
+  ];
 
   // Create años.
   foreach ($years_names as $term_name) {
@@ -445,7 +445,7 @@ function abp_core_install() {
     '1 m x 1 m',
     '120 cm x 75 cm',
     '80 cm x 50 cm',
-  ]
+  ];
 
   // Create tamaño belén.
   foreach ($sizes_names as $term_name) {
@@ -478,7 +478,7 @@ function abp_core_install() {
     '28 cm',
     '30 cm',
     'varios',
-  ]
+  ];
 
   // Create Tamaño Figuras Belén.
   foreach ($fsizes_names as $term_name) {
@@ -494,7 +494,7 @@ function abp_core_install() {
     'Arqueta',
     'Cuadro'.
     'Exento',
-  ]
+  ];
 
   // Create Tipo Belén.
   foreach ($types_names as $term_name) {
