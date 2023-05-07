@@ -75,7 +75,7 @@ function abp_core_install() {
     'Groups' => 'small-group-network-e5juUFoRHpE-unsplash.jpg',
     'Hero' => 'church-hero.png',
     'Cabecera' => 'cabecera_0.jpeg',
-    'Hazte socio' => haztesocio.jpg'
+    'Hazte socio' => 'haztesocio.jpg'
   ];
 
   $media_files = [];
