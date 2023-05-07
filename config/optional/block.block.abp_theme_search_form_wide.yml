@@ -8,7 +8,7 @@ dependencies:
     - abp_theme
 id: abp_theme_search_form_wide
 theme: abp_theme
-region: secondary_menu
+region: primary_menu
 weight: -5
 provider: null
 plugin: search_form_block
