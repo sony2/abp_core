@@ -235,13 +235,12 @@ function abp_core_install() {
     'type' => 'hero',
     'info' => 'Homepage Hero Video',
     'uuid' => '78fa9985-e444-48aa-baec-a0ddd5674a35',
-    'field_title' => 'Asociación de Belenistas de Pamplona',
     'body' => [
-      'value' => 'Desde 1953 haciendo belenes',
+      'value' => '<h2>Asociación de Belenistas de Pamplona</h2><h4>Desde 1953 haciendo belenes</h4>',
       'format' => 'full_html',
     ],
     'field_link' => [
-      'uri' => 'https://www.drupal.org',
+      'uri' => '/',
       'title' => 'Ver galería',
     ],
     'field_image' => [

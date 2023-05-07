@@ -22,8 +22,8 @@ class NewsletterBlock extends BlockBase {
   public function defaultConfiguration() {
     return [
       'action' => 'https://formspree.io/f/{form id}',
-      'title' => 'Subscribe To Our Newsletter',
-      'description' => 'Subcribe Us And Tell Us About Your Story',
+      'title' => 'Suscríbete a nuestras noticias',
+      'description' => 'Recibe las últimas novedades sobre la asociación',
     ];
   }
 
