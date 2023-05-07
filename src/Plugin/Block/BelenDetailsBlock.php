@@ -9,7 +9,7 @@ use Drupal\Core\Url;
  * Provides an evbelenent details block.
  *
  * @Block(
- *   id = "abp_core_event_details",
+ *   id = "abp_core_belen_details",
  *   admin_label = @Translation("Belen Details"),
  *   category = @Translation("ABP")
  * )

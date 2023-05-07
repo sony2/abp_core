@@ -37,6 +37,14 @@ function abp_core_theme() {
         'link' => NULL,
       ],
     ],
+    'abp_core_belen_details' => [
+      'variables' => [
+        'date' => NULL,
+        'time' => NULL,
+        'location' => NULL,
+        'link' => NULL,
+      ],
+    ],
     'abp_core_newsletter' => [
       'variables' => [
         'action' => NULL,
