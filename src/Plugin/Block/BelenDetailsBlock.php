@@ -22,7 +22,7 @@ class BelenDetailsBlock extends BlockBase {
   public function build() {
     $node = \Drupal::routeMatch()->getParameter('node');
 
-    if ($node->getType() != 'event') {
+    if ($node->getType() != 'belen') {
       return;
     }
 
