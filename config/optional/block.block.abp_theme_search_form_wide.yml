@@ -1,0 +1,21 @@
+uuid: 659371ee-bc55-4799-b200-6903161d10bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - abp_theme
+id: abp_theme_search_form_wide
+theme: abp_theme
+region: secondary_menu
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }
