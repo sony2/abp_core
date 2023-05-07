@@ -104,6 +104,7 @@ function _abp_core_node_auto_alias(EntityInterface $entity) {
     'ministry' => '/ministry/',
     'article' => '/article/',
     'event' => '/event/',
+    'belen' => '/belen/',
     'sermon' => '/sermons/',
   ];
 
