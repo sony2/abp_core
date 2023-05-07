@@ -400,7 +400,7 @@ function abp_core_install() {
     'Ángel Garayoa'.
     'Heide',
     'Hermanos Castells',
-    'Hermanos Cerrada'.
+    'Hermanos Cerrada',
     'Ignacio Fernández',
     'José Luis Mayo',
     'Luis García',
@@ -429,7 +429,7 @@ function abp_core_install() {
 
   $years_names = [
     '2023',
-    '2022'.
+    '2022',
     '2021',
     '2020',
   ];
@@ -559,6 +559,27 @@ function abp_core_install() {
     $types_ids[] = $term->id();
   }
 
+  $escenas_names = [
+    'Nacimiento',
+    'Buscando Posada',
+  ];
+
+  $voc = Vocabulary::create([
+    'vid' => 'escenas',
+    'name' => "Escenas",
+  ]);
+  $voc->save();
+
+  // Create Locations.
+  foreach ($escenas_names as $term_name) {
+    $term = Term::create([
+      'vid' => 'escenas',
+      'name' => $term_name,
+    ]);
+    $term->save();
+    $escenas_ids[] = $term->id();
+  }
+  
   $x = $y = 0;
 
   // Create sample article nodes.
