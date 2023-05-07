@@ -74,6 +74,8 @@ function abp_core_install() {
     'Students' => 'brooke-cagle--uHVRvDr7pg-unsplash.jpg',
     'Groups' => 'small-group-network-e5juUFoRHpE-unsplash.jpg',
     'Hero' => 'church-hero.png',
+    'Cabecera' => 'cabecera_0.jpeg',
+    'Hazte socio' => haztesocio.jpg'
   ];
 
   $media_files = [];
@@ -168,14 +170,14 @@ function abp_core_install() {
   $block = BlockContent::create([
     'type' => 'cta',
     'info' => 'Homepage CTA block',
-    'field_title' => 'Find a place to connect and grow through a small group, class, or regular gathering.',
+    'field_title' => 'Puedes ser miembro de la Asociación de una manera muy sencilla',
     'uuid' => '2a47ba12-37d1-462a-bf73-89527ab481ad',
     'field_link' => [
-      'uri' => 'https://www.drupal.org',
-      'title' => 'Become a Member',
+      'uri' => '/',
+      'title' => '¡Hazte socio!',
     ],
     'field_image' => [
-      'target_id' => $media_files['Church']->id(),
+      'target_id' => $media_files['Hazte socio']->id(),
     ],
   ]);
 
@@ -356,7 +358,7 @@ function abp_core_install() {
   $node->save();
 
   // Set front page to welcome node.
-  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/welcome')->save();
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/inicio')->save();
 
   // Create homepage alt node.
   $node = Node::create([
@@ -726,8 +728,8 @@ function abp_core_install() {
 
   // Create menu items.
   $menu_link = MenuLinkContent::create([
-    'title' => 'About',
-    'link' => ['uri' => 'internal:/about-us'],
+    'title' => 'Conócenos',
+    'link' => ['uri' => 'internal:/conocenos'],
     'menu_name' => 'main',
     'expanded' => TRUE,
     'weight' => 1,
@@ -737,8 +739,8 @@ function abp_core_install() {
   $main_links[$menu_link->title->value] = $menu_link;
 
   $menu_link = MenuLinkContent::create([
-    'title' => 'Ministry',
-    'link' => ['uri' => 'internal:/node'],
+    'title' => 'Eventos',
+    'link' => ['uri' => 'internal:/events'],
     'menu_name' => 'main',
     'expanded' => TRUE,
     'weight' => 2,
@@ -748,7 +750,7 @@ function abp_core_install() {
   $main_links[$menu_link->title->value] = $menu_link;
 
   $menu_link = MenuLinkContent::create([
-    'title' => 'Sermons',
+    'title' => 'Link2',
     'link' => ['uri' => 'internal:/node'],
     'menu_name' => 'main',
     'expanded' => TRUE,
@@ -759,7 +761,7 @@ function abp_core_install() {
   $main_links[$menu_link->title->value] = $menu_link;
 
   $menu_link = MenuLinkContent::create([
-    'title' => 'Pages',
+    'title' => 'Link3',
     'link' => ['uri' => 'internal:/node'],
     'menu_name' => 'main',
     'expanded' => TRUE,
@@ -770,7 +772,7 @@ function abp_core_install() {
   $main_links[$menu_link->title->value] = $menu_link;
 
   $menu_link = MenuLinkContent::create([
-    'title' => 'Contact',
+    'title' => 'Contacto',
     'link' => ['uri' => 'internal:/contact'],
     'menu_name' => 'main',
     'expanded' => TRUE,
@@ -778,56 +780,12 @@ function abp_core_install() {
   ]);
   $menu_link->save();
 
-  // Create child menu items.
-  foreach ($ministries as $media_key => $title) {
-    $menu_link = MenuLinkContent::create([
-      'title' => $title,
-      'link' => ['uri' => 'internal:/node/' . $ministry_nids[$title]],
-      'menu_name' => 'main',
-      'parent' => $main_links['Ministry']->getPluginId(),
-    ]);
-    $menu_link->save();
-  }
-
-  foreach ($sermons as $title) {
-    $menu_link = MenuLinkContent::create([
-      'title' => $title,
-      'link' => ['uri' => 'internal:/node/' . $sermons_nids[$title]],
-      'menu_name' => 'main',
-      'parent' => $main_links['Sermons']->getPluginId(),
-    ]);
-    $menu_link->save();
-  }
-
-  $menu_link = MenuLinkContent::create([
-    'title' => 'Our Blog',
-    'link' => ['uri' => 'internal:/blog'],
-    'menu_name' => 'main',
-    'parent' => $main_links['Pages']->getPluginId(),
-  ]);
-  $menu_link->save();
-
-  $menu_link = MenuLinkContent::create([
-    'title' => 'Events & Programs',
-    'link' => ['uri' => 'internal:/events'],
-    'menu_name' => 'main',
-    'parent' => $main_links['Pages']->getPluginId(),
-    'weight' => 1,
-  ]);
-  $menu_link->save();
-
-  $menu_link = MenuLinkContent::create([
-    'title' => 'Homepage (alt)',
-    'link' => ['uri' => 'internal:/homepage-alt'],
-    'menu_name' => 'main',
-    'parent' => $main_links['Pages']->getPluginId(),
-  ]);
-  $menu_link->save();
+  $main_links[$menu_link->title->value] = $menu_link;
 
   // Load feedback contact form entity.
   $contact_form = ContactForm::load('feedback');
 
   // Change title.
-  $contact_form->set('label', 'Contact Us');
+  $contact_form->set('label', 'Contacto');
   $contact_form->save();
 }

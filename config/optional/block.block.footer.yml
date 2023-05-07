@@ -18,17 +18,17 @@ settings:
   label_display: '0'
   provider: abp_core
   footer_col1:
-    value: '<h5>About the Church</h5><p>For the word of God is living and active. Sharper than any double-edged sword, it penetrates even to dividing soul and spirit, joints and marrow; it judges the thoughts and attitudes.</p>'
+    value: '<h5>Sobre la asociación</h5><p class="p1">La asociación tiene más de 650 socios pero mantiene el espíritu de sus fundadores. Difundir el belenismo y la costumbre de instalar nacimientos por todos los medios posibles.</p>'
     format: full_html
   footer_col2:
-    value: '<h5>Quick Links</h5><ul class="list-unstyled"><li><a class="text-decoration-none" href="#">Upcoming events</a></li><li><a class="text-decoration-none" href="#">Ministries</a></li><li><a class="text-decoration-none" href="#">Recent Sermons</a></li><li><a class="text-decoration-none" href="#">Contact us</a></li></ul>'
+    value: '<h5>Apartados</h5><ul><li><a class="text-decoration-none">Noticias</a></li><li><a class="text-decoration-none">Nuestros belenes</a></li><li><a class="text-decoration-none">Hazte socio</a></li><li><a class="text-decoration-none" href="/contacto">Contacto</a></li></ul>'
     format: full_html
   footer_col3:
-    value: '<h5>Our Address</h5><p>Catholic Church<br>121 King Street, Melbourne&nbsp;<br>Victoria 3000 Australia<br><br>Phone: +61 3 8376 6284<br>Email: <a href="#">mail@catholicwebsite.com</a></p>'
+    value: '<h5>Datos de contacto</h5><p class="p1">c/ Doctor Victoriano Juaristi nº 8 bajo<br>31012 - PAMPLONA<br><br>Teléfono:&nbsp;948 153 290<br>Whatsapp:&nbsp;948 153 290<br>Email:&nbsp;asociacion@belenistaspamplona.es</p>'
     format: full_html
   footer_connect: TRUE
-  footer_facebook: 'https://facebook.com/'
-  footer_twitter: 'https://twitter.com/'
-  footer_youtube: 'https://youtube.com/'
-  footer_instagram: 'https://instagram.com/'
+  footer_facebook: ''
+  footer_twitter: 'https://twitter.com/BelenesPamplona'
+  footer_youtube: 'https://youtube.com/@belenistaspamplona'
+  footer_instagram: ''
 visibility: {  }
