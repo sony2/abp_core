@@ -41,23 +41,16 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_galeria:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: responsive
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_video_belen:
     type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: responsive
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content    
 hidden:
+  field_galeria: true
   field_ano_belen: true
   field_escena: true
   field_tipo_belen: true
