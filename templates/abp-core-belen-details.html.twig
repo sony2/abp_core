@@ -1,17 +1,37 @@
 <h4 class="pb-2">{{ 'Detalles del belén'|t }}</h4>
-{% if date %}
+{% if ano_belen %}
   <div class="mb-3">
-    <i class="bi bi-calendar-date"></i> {{ date }}
+    <i class="bi bi-calendar-date"></i> {{ ano_belen }}
   </div>
 {% endif %}
-{% if time %}
+{% if localizacion_belen %}
   <div class="mb-3">
-    <i class="bi bi-clock"></i> {{ time }}
+    <i class="bi bi-geo-alt-fill"></i> {{ localizacion_belen }}
   </div>
 {% endif %}
-{% if location %}
+{% if tamano_belen %}
   <div class="mb-3">
-    <i class="bi bi-geo-alt-fill"></i> {{ location }}
+    <b>Tamaño:</b> {{ tamano_belen }}
+  </div>
+{% endif %}
+{% if tipo_belen %}
+  <div class="mb-3">
+    <b>Tipo:</b> {{ tipo_belen }}
+  </div>
+{% endif %}
+{% if escena %}
+  <div class="mb-3">
+    <b>Escena:</b> {{ escena }}
+  </div>
+{% endif %}
+{% if artesanos_figuras %}
+  <div class="mb-3">
+    <b>Artesanos de las figuras:</b> {{ artesanos_figuras }}
+  </div>
+{% endif %}
+{% if tamano_figuras_belen %}
+  <div class="mb-3">
+    <b>Tamaños de las figuras:</b> {{ tamano_figuras_belen }}
   </div>
 {% endif %}
 {% if link %}

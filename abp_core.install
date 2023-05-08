@@ -762,7 +762,7 @@ function abp_core_install() {
     'uid' => 1,
     'status' => 1,
     'body' => [
-      'value' => '<p>El Belén recrea la búsqueda de alojamiento de José y María, tras el empadronamiento, ambientado en el entorno de una ciudad oriental con la vida cotidiana y los grupos sociales de la época.</p><p>Figuras de estilo hebreo de los artesanos sevillanos Hermanos Cerrada, de 16 cm, del artesano madrileño José Luis Mayo, y de Alfonso Rodríguez, uno de los autores del Belén.</p><p>Tiene unas dimensiones aproximadas de 5 m2.</p><p>Realizado con poliestireno expandido y extruido, madera de balsa, resina epoxi, silicona y espuma de poliuretano, y pintado con tierras y pintura acrílica.</p>',
+      'value' => '<br><p>El Belén recrea la búsqueda de alojamiento de José y María, tras el empadronamiento, ambientado en el entorno de una ciudad oriental con la vida cotidiana y los grupos sociales de la época.</p><p>Figuras de estilo hebreo de los artesanos sevillanos Hermanos Cerrada, de 16 cm, del artesano madrileño José Luis Mayo, y de Alfonso Rodríguez, uno de los autores del Belén.</p><p>Tiene unas dimensiones aproximadas de 5 m2.</p><p>Realizado con poliestireno expandido y extruido, madera de balsa, resina epoxi, silicona y espuma de poliuretano, y pintado con tierras y pintura acrílica.</p>',
       'format' => 'full_html',
       'summary' => 'El Belén recrea la búsqueda de alojamiento de José y María, tras el empadronamiento, ambientado en el entorno de una ciudad oriental con la vida cotidiana y los grupos sociales de la época.',
     ],
@@ -784,7 +784,7 @@ function abp_core_install() {
       'target_id' => $escenas_ids['2'],
     ],
     'field_foto_principal' => [
-      'target_id' => $media_files['Cabecera'],
+      'target_id' => $media_files['Cabecera']->id(),
     ],
     'field_galeria' => [
       [
@@ -858,8 +858,8 @@ function abp_core_install() {
   $main_links[$menu_link->title->value] = $menu_link;
 
   $menu_link = MenuLinkContent::create([
-    'title' => 'Link3',
-    'link' => ['uri' => 'internal:/node'],
+    'title' => 'Belén',
+    'link' => ['uri' => 'internal:/belen/buscando-posada'],
     'menu_name' => 'main',
     'expanded' => TRUE,
     'weight' => 3,

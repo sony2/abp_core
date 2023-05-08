@@ -26,27 +26,43 @@ targetEntityType: node
 bundle: belen
 mode: default
 content:
+  field_foto_principal:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: responsive
+    third_party_settings: {  }
+    weight: 1
+    region: content
   body:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
-  field_ano_belen:
-    type: entity_reference_label
+  field_galeria:
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      link: true
+      view_mode: responsive
     third_party_settings: {  }
     weight: 3
     region: content
+  field_video_belen:
+     type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: responsive
+    third_party_settings: {  }
+    weight: 4
+    region: content    
 hidden:
-  field_foto_principal: true
+  field_ano_belen: true
   field_escena: true
   field_tipo_belen: true
   field_tamano_belen: true
   field_artesanos_figuras: true
   field_tamano_figuras_belen: true
-  field_galeria: true
-  field_video_belen: true
+  field_localizacion_belen: true
+

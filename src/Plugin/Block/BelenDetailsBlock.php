@@ -22,19 +22,89 @@ class BelenDetailsBlock extends BlockBase {
   public function build() {
     $node = \Drupal::routeMatch()->getParameter('node');
 
-    if ($node->getType() != 'belen') {
+    if ($node != null && $node->getType() != 'belen') {
       return;
+    }
+
+    $artesanos_figuras = "";
+    $terms = $node->get('field_artesanos_figuras')->referencedEntities();
+    foreach ($terms as $term) {
+      $name = $term->getName();
+      $artesanos_figuras = $artesanos_figuras . $name . ', ';
+    }
+    if (str_ends_with($artesanos_figuras, ', ')) {
+      $artesanos_figuras = substr($artesanos_figuras, 0, -2);
+    }
+
+    $ano_belen = "";
+    $terms = $node->get('field_ano_belen')->referencedEntities();
+    foreach ($terms as $term) {
+      $name = $term->getName();
+      $ano_belen = $ano_belen . $name . ', ';
+    }
+    if (str_ends_with($ano_belen, ', ')) {
+      $ano_belen = substr($ano_belen, 0, -2);
+    }
+
+    $escena = "";
+    $terms = $node->get('field_escena')->referencedEntities();
+    foreach ($terms as $term) {
+      $name = $term->getName();
+      $escena = $escena . $name . ', ';
+    }
+    if (str_ends_with($escena, ', ')) {
+      $escena = substr($escena, 0, -2);
+    }
+
+    $localizacion_belen = "";
+    $terms = $node->get('field_localizacion_belen')->referencedEntities();
+    foreach ($terms as $term) {
+      $name = $term->getName();
+      $localizacion_belen = $localizacion_belen . $name . ', ';
+    }
+    if (str_ends_with($localizacion_belen, ', ')) {
+      $localizacion_belen = substr($localizacion_belen, 0, -2);
+    }
+
+    $tamano_belen = "";
+    $terms = $node->get('field_tamano_belen')->referencedEntities();
+    foreach ($terms as $term) {
+      $name = $term->getName();
+      $tamano_belen = $tamano_belen . $name . ', ';
+    }
+    if (str_ends_with($tamano_belen, ', ')) {
+      $tamano_belen = substr($tamano_belen, 0, -2);
+    }
+
+    $tamano_figuras_belen = "";
+    $terms = $node->get('field_tamano_figuras_belen')->referencedEntities();
+    foreach ($terms as $term) {
+      $name = $term->getName();
+      $tamano_figuras_belen = $tamano_figuras_belen . $name . ', ';
+    }
+    if (str_ends_with($tamano_figuras_belen, ', ')) {
+      $tamano_figuras_belen = substr($tamano_figuras_belen, 0, -2);
+    }
+
+    $tipo_belen = "";
+    $terms = $node->get('field_tipo_belen')->referencedEntities();
+    foreach ($terms as $term) {
+      $name = $term->getName();
+      $tipo_belen = $tipo_belen . $name . ', ';
+    }
+    if (str_ends_with($tipo_belen, ', ')) {
+      $tipo_belen = substr($tipo_belen, 0, -2);
     }
 
     $build = [
       '#theme' => 'abp_core_belen_details',
-      '#artesanos_figuras' => $node->get('field_artesanos_figuras')->value,
-      '#ano_belen' => $node->get('field_ano_belen')->value,
-      '#escena' => $node->get('field_escena')->value,
-      '#localizacion_belen' => $node->get('field_localizacion_belen')->value,
-      '#tamano_belen' => $node->get('field_tamano_belen')->value,
-      '#tamano_figuras_belen' => $node->get('field_tamano_figuras_belen')->value,
-      '#tipo_belen' => $node->get('field_tipo_belen')->value,
+      '#artesanos_figuras' => $artesanos_figuras,
+      '#ano_belen' => $ano_belen,
+      '#escena' => $escena,
+      '#localizacion_belen' => $localizacion_belen,
+      '#tamano_belen' => $tamano_belen,
+      '#tamano_figuras_belen' => $tamano_figuras_belen,
+      '#tipo_belen' => $tipo_belen,
     ];
 
     $build['#cache']['max-age'] = 0;
