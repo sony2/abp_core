@@ -149,23 +149,6 @@ function abp_core_install() {
 
   $block->save();
 
-  // Create Contact Hero block.
-  $block = BlockContent::create([
-    'type' => 'hero',
-    'info' => 'Contact Hero',
-    'field_title' => 'Reach Out',
-    'uuid' => 'e6ce06bf-6463-4fe9-9eec-44f66b74c60c',
-    'body' => [
-      'value' => '<p>Our Church address and contact details.</p>',
-      'format' => 'full_html',
-    ],
-    'field_image' => [
-      'target_id' => $media_files['Church']->id(),
-    ],
-  ]);
-
-  $block->save();
-
   // Create homepage CTA block.
   $block = BlockContent::create([
     'type' => 'cta',
@@ -293,6 +276,40 @@ function abp_core_install() {
 
   $block->save();
 
+  // Create conocenos page.
+  $node = Node::create([
+    'type' => 'page',
+    'title' => 'Conócenos',
+    'uid' => 1,
+    'status' => 1,
+    'promote' => 1,
+    'sticky' => 1,
+    'body' => [
+      'value' => 'En el año 1963 la Asociación de Belenistas de Pamplona es cofundadora de la Federación Española de Belenistas. Esta entidad encarga a los Belenistas de Pamplona la organización en los años 1964, 1972, 1979, 1988 y 2000 de los Congresos Nacionales Belenistas. En 1997 fundó, junto a otras asociaciones navarras la Federación de Belenistas de Navarra, Fe.Be.Na., para fomentar el asociacionismo belenista en la Comunidad Foral. La mayor dificultad con que ha tropezado la Asociación de Belenistas de Pamplona ha sido la de no disponer de un local estable para sala de exposiciones, que han debido ser itinerantes por diversos locales y salas de Pamplona. Esta carencia finalizó en el año 1982, cuando el Arzobispado de Pamplona, gracias a la buena disposición de la Parroquia de Cristo Rey y su equipo sacerdotal, cedió "a precario" a los Belenistas el uso como taller y local de exposiciones de la Cripta de la Iglesia de Cristo Rey de Pamplona. Un local de más de 500 m2 con 14 dioramas de tres metros por tres metros donde poder realizar nuestras exposiciones. Esa navidad se expusieron los primeros belenes en este local. En esta sala, que los belenistas llamamos cariñosamente "Belén", visitan la exposición unas 60 mil personas cada Navidad. La posibilidad de disponer de un local con su taller durante todo el año posibilitó que las actividades de la asociación se multiplicaran. Aumentó el número de socios y para 1985 éramos 202. Se empezó a editar el boletín AUZOLAN BELENISTA con información para todos los socios y que difundimos a todas las asociaciones belenistas que conocemos. En el año 2009 abandonamos, por causas ajenas a nuestra voluntad, el local de Cristo Rey y empezamos nuestro peregrinaje. Al fin conseguimos adquirir, gracias al esfuerzo de nuestros socios, un amplio local en Pamplona que nos permite mantener las actividades que tradicionalmente realizamos. Desde la construcción de belenes hasta los cursos de belenismo y el resto de actividades. Otra cosa fue mantener la exposición. El trabajo fue duro pero, afortunadamente, hemos encontrado un nuevo local para las navidades. El Palacio de Congresos y Auditorio de Navarra, Baluarte, donde en 1000 metros cuadrados exponemos doce grandes belenes y un sinfín de arquetas y belenes de menor tamaño. Llevamos tres navidades y el número de visitantes sigue alrededor de 30.000 personas en el mes escaso que dura la campaña. El resto de belenes repartidos por toda la ciudad se mantienen como siempre, en salas de cultura, en locales de ocio, en ayuntamientos próximos a Pamplona, en organismos oficiales, etc. A la Asociación de Belenistas de Pamplona pertenecen en la actualidad más de 600 socios. Se realizan actividades como convivencias belenistas, cursillos de técnica belenista, excursiones por Navarra y visitas a belenes y asociaciones belenistas de toda la geografía nacional. Al primer Presidente D. Angel Mª Pueyo Bonet (1.953 - 1.957) sucedieron D. Eliso Ijalba Lángara (1.957 - 1973), D. Manuel Mª Castells (1.973 - 2.000), D. José Miguel Tabar Primicia (2.000 - 2.004), D. José Mª Valgañón Ruiz (2.004 - 2.011), D. Jesús María Gómara Arraiza (2.011 - 2.018) y  D. Pedro Javier Martínez Barbarin (2018 hasta hoy). En el año 2000 y en el mes de octubre, nuestra ciudad acogió a los congresistas que participaron al XVI Congreso Internacional Belenista "Aleluya 2000" y al XXXVIII Congreso Nacional, con una asistencia de más de 400 congresistas y con exposiciones de belenes en la Ciudadela, Planetario, Museo de Navarra y Asociación de Belenistas. La repercusión que a nivel nacional e internacional tuvieron los citados congresos se recogió a través de comunicaciones de los diferentes países asistentes agradeciendo la organización y la hospitalidad de nuestro pueblo. Durante los últimos veinte años han sido más de cien personas cada año las que han pasado por nuestros cursos de iniciación al Belenismo. Además, más de 5000 niños de colegios navarros pasan por la exposición en su horario escolar durante la campaña.',
+      'format' => 'full_html',
+    ],
+    'path' => [
+      'alias' => '/conocenos',
+    ],
+  ]);
+
+  // Create contacto page.
+  $node = Node::create([
+    'type' => 'page',
+    'title' => 'Contacto',
+    'uid' => 1,
+    'status' => 1,
+    'promote' => 1,
+    'sticky' => 1,
+    'body' => [
+      'value' => '<p><strong>Local de la asociación</strong></p><p>c/ Doctor Victoriano Juaristi 8, bajo (Barrio de San Jorge)&nbsp;<br>Martes y jueves de 18 a 20 horas&nbsp;</p><p>Teléfono: 948 153 290&nbsp;<br>Correo electrónico: asociacion@belenistaspamplona.es&nbsp;</p><p><strong>Dirección Postal</strong></p><p>&nbsp;c/ Doctor Victoriano Juaristi nº 8 bajo 31012 - PAMPLONA</p><p><strong>Redes Sociales</strong></p><p>TWITTER: @belenespamplona</p><p>YOUTUBE: youtube.com/@BelenistasPamplona&nbsp;</p><p>&nbsp;</p><div class="tablaResponsive" style="-webkit-text-stroke-width:0px;box-sizing:inherit;color:rgb(0, 0, 0);font-family:&quot;Trebuchet MS&quot;, Arial, sans-serif;font-size:13px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:justify;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;"><table class="tabla" style="box-sizing:inherit;margin-left:auto;margin-right:auto;max-width:100%;text-align:left;" width="550" border="0"><tbody style="box-sizing:inherit;"><tr style="box-sizing:inherit;"><td style="box-sizing:inherit;text-align:center;width:180.664px;" valign="bottom" align="center"><a style="box-sizing:inherit;color:rgb(0, 0, 125);text-decoration:none;" href="http://www.unfoeprae.org/es" title="Ir a web oficial de Universalis Foederatio Praesepristica en español" target="_blank" rel="noopener"><img style="border:0px;box-sizing:inherit;height:auto;margin:10px;max-height:90%;max-width:90%;" src="https://www.belenistaspamplona.es/almacen/421831789_59490.jpg" alt="UN FOE PRAE" width="110" height="96"></a></td><td style="box-sizing:inherit;text-align:center;width:180.664px;" valign="bottom" align="center"><a style="box-sizing:inherit;color:rgb(0, 0, 125);text-decoration:none;" href="http://www.anunciata.es/" title="Ir a web oficial de la Federación Española de Belenistas" target="_blank" rel="noopener"><img style="border:0px;box-sizing:inherit;height:auto;margin:10px;max-height:90%;max-width:90%;" src="https://www.belenistaspamplona.es/almacen/logofeb.gif" alt="FEB" width="31.18%" border="0"></a></td><td style="box-sizing:inherit;text-align:center;width:180.672px;" valign="bottom" align="center"><a style="box-sizing:inherit;color:rgb(0, 0, 125);text-decoration:none;" href="http://belenistasnavarra.com/" title="Ir a cuenta Facebook de Federación de Belenistas de Navarra" target="_blank" rel="noopener"><img style="border:0px;box-sizing:inherit;height:auto;margin:10px;max-height:90%;max-width:90%;" src="https://www.belenistaspamplona.es/almacen/logofbn.gif" alt="FeBeNa" width="48.64%" border="0"></a></td></tr><tr style="box-sizing:inherit;"><td style="box-sizing:inherit;text-align:center;width:180.664px;" align="center"><a style="box-sizing:inherit;color:rgb(0, 0, 125);text-decoration:none;" href="http://www.unfoeprae.org/es" title="Ir a web oficial de Universalis Foederatio Praesepristica en español" target="_blank" rel="noopener">Universalis Foederatio Praesepistica</a></td><td style="box-sizing:inherit;text-align:center;width:180.664px;" align="center"><a style="box-sizing:inherit;color:rgb(0, 0, 125);text-decoration:none;" href="http://www.anunciata.es/" title="Ir a web oficial de la Federación Española de Belenistas" target="_blank" rel="noopener">Federación Española de Belenistas</a></td><td style="box-sizing:inherit;text-align:center;width:180.672px;" align="center"><a style="box-sizing:inherit;color:rgb(0, 0, 125);text-decoration:none;" href="https://www.facebook.com/belenistas.navarra" title="Ir a cuenta Facebook de Federación de Belenistas de Navarra" target="_blank" rel="noopener">Federación de Belenistas de Navarra</a></td></tr></tbody></table><p>&nbsp;</p></div><div style="-webkit-text-stroke-width:0px;box-sizing:inherit;color:rgb(0, 0, 0);font-family:&quot;Trebuchet MS&quot;, Arial, sans-serif;font-size:13px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;"><div style="box-sizing:inherit;">&nbsp;</div></div>',
+      'format' => 'full_html',
+    ],
+    'path' => [
+      'alias' => '/contacto',
+    ],
+  ]);
+
   // Create 404 page.
   $node = Node::create([
     'type' => 'page',
@@ -378,37 +395,20 @@ function abp_core_install() {
 
   $node->save();
 
-  // Create About us basic page.
-  $node = Node::create([
-    'type' => 'page',
-    'title' => 'Conócenos',
-    'uid' => 1,
-    'status' => 1,
-    'body' => [
-      'value' => '<p class="p1">En el año 1963 la Asociación de Belenistas de Pamplona es cofundadora de la&nbsp;<a href="http://www.anunciata.es/"><span class="s1">Federación Española de Belenistas</span></a>. Esta entidad encarga a los Belenistas de Pamplona la organización en los años 1964, 1972, 1979, 1988 y 2000 de los Congresos Nacionales Belenistas.</p><p class="p1">En 1997 fundó, junto a otras asociaciones navarras la Federación de Belenistas de Navarra, Fe.Be.Na., para fomentar el asociacionismo belenista en la Comunidad Foral.</p><p class="p1">La mayor dificultad con que ha tropezado la Asociación de Belenistas de Pamplona ha sido la de no disponer de un local estable para sala de exposiciones, que han debido ser itinerantes por diversos locales y salas de Pamplona. Esta carencia finalizó en el año 1982, cuando el Arzobispado de Pamplona, gracias a la buena disposición de la Parroquia de Cristo Rey y su equipo sacerdotal, cedió "a precario" a los Belenistas el uso como taller y local de exposiciones de la Cripta de la Iglesia de Cristo Rey de Pamplona. Un local de más de 500 m2 con 14 dioramas de tres metros por tres metros donde poder realizar nuestras exposiciones. Esa navidad se expusieron los primeros belenes en este local.</p><p class="p1">En esta sala, que los belenistas llamamos cariñosamente "Belén", visitan la exposición unas 60 mil personas cada Navidad. La posibilidad de disponer de un local con su taller durante todo el año posibilitó que las actividades de la asociación se multiplicaran. Aumentó el número de socios y para 1985 éramos 202. Se empezó a editar el boletín AUZOLAN BELENISTA con información para todos los socios y que difundimos a todas las asociaciones belenistas que conocemos.</p><p class="p1">En el año 2009 abandonamos, por causas ajenas a nuestra voluntad, el local de Cristo Rey y empezamos nuestro peregrinaje. Al fin conseguimos adquirir, gracias al esfuerzo de nuestros socios, un amplio local en Pamplona que nos permite mantener las actividades que tradicionalmente realizamos. Desde la construcción de belenes hasta los cursos de belenismo y el resto de actividades.</p><p class="p1">&nbsp;Otra cosa fue mantener la exposición. El trabajo fue duro pero, afortunadamente, hemos encontrado un nuevo local para las navidades. El Palacio de Congresos y Auditorio de Navarra, Baluarte, donde en 1000 metros cuadrados exponemos doce grandes belenes y un sinfín de arquetas y belenes de menor tamaño. Llevamos tres navidades y el número de visitantes sigue alrededor de 30.000 personas en el mes escaso que dura la campaña. El resto de belenes repartidos por toda la ciudad se mantienen como siempre, en salas de cultura, en locales de ocio, en ayuntamientos próximos a Pamplona, en organismos oficiales, etc.</p><p class="p1">A la Asociación de Belenistas de Pamplona pertenecen en la actualidad más de 600 socios. Se realizan actividades como convivencias belenistas, cursillos de técnica belenista, excursiones por Navarra y visitas a belenes y asociaciones belenistas de toda la geografía nacional.</p><p class="p1">Al primer Presidente D. Angel Mª Pueyo Bonet (1.953 - 1.957) sucedieron D. Eliso Ijalba Lángara (1.957 - 1973), D. Manuel Mª Castells (1.973 - 2.000), D. José Miguel Tabar Primicia (2.000 - 2.004),&nbsp;D. José Mª Valgañón Ruiz (2.004 - 2.011), D. Jesús María Gómara Arraiza (2.011 - 2.018) y&nbsp; D. Pedro Javier Martínez Barbarin (2018 hasta hoy).</p><p class="p1">En el año 2000 y en el mes de octubre, nuestra ciudad acogió a los congresistas que participaron al XVI Congreso Internacional Belenista "Aleluya 2000" y al XXXVIII Congreso Nacional, con una asistencia de más de 400 congresistas y con exposiciones de belenes en la Ciudadela, Planetario, Museo de Navarra y Asociación de Belenistas.</p><p class="p1">La repercusión que a nivel nacional e internacional tuvieron los citados congresos se recogió a través de comunicaciones de los diferentes países asistentes agradeciendo la organización y la hospitalidad de nuestro pueblo.</p><p class="p1">Durante los últimos veinte años han sido más de cien personas cada año las que han pasado por nuestros cursos de iniciación al Belenismo. Además, más de 5000 niños de colegios navarros pasan por la exposición en su horario escolar durante la campaña.</p>',
-      'format' => 'full_html',
-    ],
-    'path' => [
-      'alias' => '/conocenos',
-    ],
-  ]);
-
-  $node->save();
-
   $artesanos_names = [
-    'Alfonso Rodríguez',
-    'Ángel Garayoa'.
-    'Heide',
-    'Hermanos Castells',
-    'Hermanos Cerrada',
-    'Ignacio Fernández',
-    'José Luis Mayo',
-    'Luis García',
-    'Martino Landi',
-    'Montserrat Ribes',
-    'Oliver',
-    'Sandrini',
-    'Talleres de Arte Cristiano de Olot',
+    '1' => 'Alfonso Rodríguez',
+    '2' => 'Ángel Garayoa'.
+    '3' => 'Heide',
+    '4' => 'Hermanos Castells',
+    '5' => 'Hermanos Cerrada',
+    '6' => 'Ignacio Fernández',
+    '7' => 'José Luis Mayo',
+    '8' => 'Luis García',
+    '9' => 'Martino Landi',
+    '10' => 'Montserrat Ribes',
+    '11' => 'Oliver',
+    '12' => 'Sandrini',
+    '13' => 'Talleres de Arte Cristiano de Olot',
   ];
 
   $voc = Vocabulary::create([
@@ -417,21 +417,22 @@ function abp_core_install() {
   ]);
   $voc->save();
 
+  $artesanos_ids = [];
   // Create artesanos.
-  foreach ($artesanos_names as $term_name) {
+  foreach ($artesanos_names as $term_id => $term_name) {
     $term = Term::create([
       'vid' => 'artesanos_figuras',
       'name' => $term_name,
     ]);
     $term->save();
-    $artesanos_ids[] = $term->id();
+    $artesanos_ids[$term_id] = $term->id();
   }
 
   $years_names = [
-    '2023',
-    '2022',
-    '2021',
-    '2020',
+    '1' => '2023',
+    '2' => '2022',
+    '3' => '2021',
+    '4' => '2020',
   ];
 
   $voc = Vocabulary::create([
@@ -440,25 +441,26 @@ function abp_core_install() {
   ]);
   $voc->save();
 
+  $years_ids = [];
   // Create años.
-  foreach ($years_names as $term_name) {
+  foreach ($years_names as $term_id => $term_name) {
     $term = Term::create([
       'vid' => 'ano_belen',
       'name' => $term_name,
     ]);
     $term->save();
-    $years_ids[] = $term->id();
+    $years_ids[$term_id] = $term->id();
   }
 
   $sizes_names = [
-    '3 m x 4 m',
-    '2,7 m x 2,7 m'.
-    '2 m x 3 m',
-    '2 m x 2 m',
-    '2 m x 1 m',
-    '1 m x 1 m',
-    '120 cm x 75 cm',
-    '80 cm x 50 cm',
+    '1' => '3 m x 4 m',
+    '2' => '2,7 m x 2,7 m'.
+    '3' => '2 m x 3 m',
+    '4' => '2 m x 2 m',
+    '5' => '2 m x 1 m',
+    '6' => '1 m x 1 m',
+    '7' => '120 cm x 75 cm',
+    '8' => '80 cm x 50 cm',
   ];
 
   $voc = Vocabulary::create([
@@ -467,37 +469,38 @@ function abp_core_install() {
   ]);
   $voc->save();
 
+  $sizes_ids = [];
   // Create tamaño belén.
-  foreach ($sizes_names as $term_name) {
+  foreach ($sizes_names as $term_id => $term_name) {
     $term = Term::create([
       'vid' => 'tamano_belen',
       'name' => $term_name,
     ]);
     $term->save();
-    $sizes_ids[] = $term->id();
+    $sizes_ids[$term_id] = $term->id();
   }
 
   $fsizes_names = [
-    '5 cm',
-    '6 cm',
-    '7 cm',
-    '8 cm',
-    '9 cm',
-    '10 cm',
-    '11 cm',
-    '12 cm',
-    '14 cm',
-    '15 cm',
-    '16 cm',
-    '18 cm',
-    '19 cm',
-    '20 cm',
-    '22 cm',
-    '24 cm',
-    '26 cm',
-    '28 cm',
-    '30 cm',
-    'varios',
+    '1' => '5 cm',
+    '2' => '6 cm',
+    '3' => '7 cm',
+    '4' => '8 cm',
+    '5' => '9 cm',
+    '6' => '10 cm',
+    '7' => '11 cm',
+    '8' => '12 cm',
+    '9' => '14 cm',
+    '10' => '15 cm',
+    '11' => '16 cm',
+    '12' => '18 cm',
+    '13' => '19 cm',
+    '14' => '20 cm',
+    '15' => '22 cm',
+    '16' => '24 cm',
+    '17' => '26 cm',
+    '18' => '28 cm',
+    '19' => '30 cm',
+    '20' => 'varios',
   ];
 
   $voc = Vocabulary::create([
@@ -506,20 +509,21 @@ function abp_core_install() {
   ]);
   $voc->save();
 
+  $fsizes_ids = [];
   // Create Tamaño Figuras Belén.
-  foreach ($fsizes_names as $term_name) {
+  foreach ($fsizes_names as $term_id => $term_name) {
     $term = Term::create([
       'vid' => 'tamano_figuras_belen',
       'name' => $term_name,
     ]);
     $term->save();
-    $fsizes_ids[] = $term->id();
+    $fsizes_ids[$term_id] = $term->id();
   }
 
   $types_names = [
-    'Arqueta',
-    'Cuadro'.
-    'Exento',
+    '1' => 'Arqueta',
+    '2' => 'Cuadro'.
+    '3' => 'Exento',
   ];
 
   $voc = Vocabulary::create([
@@ -528,19 +532,20 @@ function abp_core_install() {
   ]);
   $voc->save();
 
+  $types_ids = [];
   // Create Tipo Belén.
-  foreach ($types_names as $term_name) {
+  foreach ($types_names as $term_id => $term_name) {
     $term = Term::create([
       'vid' => 'tipo_belen',
       'name' => $term_name,
     ]);
     $term->save();
-    $types_ids[] = $term->id();
+    $types_ids[$term_id] = $term->id();
   }
 
   $location_names = [
-    'Baluarte',
-    'Ayuntamiento',
+    '1' => 'Baluarte',
+    '2' => 'Ayuntamiento',
   ];
 
   $voc = Vocabulary::create([
@@ -549,19 +554,20 @@ function abp_core_install() {
   ]);
   $voc->save();
 
+  $locations_ids = [];
   // Create Locations.
-  foreach ($location_names as $term_name) {
+  foreach ($location_names as $term_id => $term_name) {  
     $term = Term::create([
       'vid' => 'localizacion_belen',
       'name' => $term_name,
     ]);
     $term->save();
-    $types_ids[] = $term->id();
+    $locations_ids[$term_id] = $term->id();
   }
 
   $escenas_names = [
-    'Nacimiento',
-    'Buscando Posada',
+    '1' => 'Nacimiento',
+    '2' => 'Buscando Posada',
   ];
 
   $voc = Vocabulary::create([
@@ -570,14 +576,15 @@ function abp_core_install() {
   ]);
   $voc->save();
 
+  $escenas_ids = [];
   // Create Locations.
-  foreach ($escenas_names as $term_name) {
+  foreach ($escenas_names as $term_id => $term_name) {    
     $term = Term::create([
       'vid' => 'escenas',
       'name' => $term_name,
     ]);
     $term->save();
-    $escenas_ids[] = $term->id();
+    $escenas_ids[$term_id] = $term->id();
   }
   
   $x = $y = 0;
@@ -744,6 +751,69 @@ function abp_core_install() {
 
   $video_entity->save();
 
+  // Save belen node.
+  $node = Node::create([
+    'type' => 'belen',
+    'title' => 'Buscando Posada',
+    'uid' => 1,
+    'status' => 1,
+    'body' => [
+      'value' => '<p>El Belén recrea la búsqueda de alojamiento de José y María, tras el empadronamiento, ambientado en el entorno de una ciudad oriental con la vida cotidiana y los grupos sociales de la época.</p><p>Figuras de estilo hebreo de los artesanos sevillanos Hermanos Cerrada, de 16 cm, del artesano madrileño José Luis Mayo, y de Alfonso Rodríguez, uno de los autores del Belén.</p><p>Tiene unas dimensiones aproximadas de 5 m2.</p><p>Realizado con poliestireno expandido y extruido, madera de balsa, resina epoxi, silicona y espuma de poliuretano, y pintado con tierras y pintura acrílica.</p>',
+      'format' => 'full_html',
+      'summary' => 'El Belén recrea la búsqueda de alojamiento de José y María, tras el empadronamiento, ambientado en el entorno de una ciudad oriental con la vida cotidiana y los grupos sociales de la época.',
+    ],
+    'field_artesanos_figuras' => [
+      [
+        'target_id' => $artesanos_ids['5']->id(),
+      ],
+      [
+        'target_id' => $artesanos_ids['7']->id(),
+      ],
+      [
+        'target_id' => $artesanos_ids['1']->id(),
+      ],
+    ],
+    'field_ano_belen' => [
+      'target_id' => $years_ids['2']->id(),
+    ],
+    'field_escena' => [
+      'target_id' => $escenas_ids['2']->id(),
+    ],
+    'field_foto_principal' => [
+      'target_id' => $media_files['Cabecera']->id(),
+    ],
+    'field_galeria' => [
+      [
+        'target_id' => $media_files['Beach 1']->id(),
+      ],
+      [
+        'target_id' => $media_files['Beach 2']->id(),
+      ],
+      [
+        'target_id' => $media_files['Church']->id(),
+      ],
+      [
+        'target_id' => $media_files['Climb']->id(),
+      ],
+    ]
+    'field_localizacion_belen' => [
+      'target_id' => $locations_ids['1']->id(),
+    ],
+    'field_tamano_belen' => [
+      'target_id' => $sizes_ids['2']->id(),
+    ],   
+    'field_tamano_figuras_belen' => [
+      [
+        'target_id' => $fsizes_ids['11']->id(),
+      ],
+    ],
+    'field_video_belen' => [
+      'target_id' => $video_entity->id(),
+    ],     
+  ]);
+
+  $node->save();
+
   $main_links = [];
 
   // Create menu items.
@@ -793,7 +863,7 @@ function abp_core_install() {
 
   $menu_link = MenuLinkContent::create([
     'title' => 'Contacto',
-    'link' => ['uri' => 'internal:/contact'],
+    'link' => ['uri' => 'internal:/contacto'],
     'menu_name' => 'main',
     'expanded' => TRUE,
     'weight' => 5,
