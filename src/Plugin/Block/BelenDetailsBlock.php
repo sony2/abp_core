@@ -26,32 +26,19 @@ class BelenDetailsBlock extends BlockBase {
       return;
     }
 
-    $time = $formatted_date = $link = '';
-
-    // Format the date and time.
-    if (!empty($node->get('field_date')->value)) {
-      $date_value = $node->get('field_date')->value;
-      $date = date_create($date_value);
-      $formatted_date = date_format($date, "d F Y");
-      $time = date_format($date, "h:i A");
-    }
-
-    if (!empty($node->get('field_link')->uri)) {
-      $uri = $node->get('field_link')->uri;
-      $link = Url::fromUri($uri)->toString();
-    }
-
     $build = [
       '#theme' => 'abp_core_belen_details',
-      '#date' => $formatted_date,
-      '#time' => $time,
-      '#location' => $node->get('field_location')->value,
-      '#link' => $link,
+      '#artesanos_figuras' => $node->get('field_artesanos_figuras')->value,
+      '#ano_belen' => $node->get('field_ano_belen')->value,
+      '#escena' => $node->get('field_escena')->value,
+      '#localizacion_belen' => $node->get('field_localizacion_belen')->value,
+      '#tamano_belen' => $node->get('field_tamano_belen')->value,
+      '#tamano_figuras_belen' => $node->get('field_tamano_figuras_belen')->value,
+      '#tipo_belen' => $node->get('field_tipo_belen')->value,
     ];
 
     $build['#cache']['max-age'] = 0;
 
     return $build;
   }
-
 }
