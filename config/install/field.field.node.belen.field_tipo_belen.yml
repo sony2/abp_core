@@ -7,7 +7,7 @@ dependencies:
     - node.type.belen
     - taxonomy.vocabulary.tags
 id: node.belen.field_tipo_belen
-field_name: field_escena
+field_name: field_tipo_belen
 entity_type: node
 bundle: belen
 label: 'Tipo de Belén'
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      tags: field_tipo_belen
+      tags: tipo_belen
     sort:
       field: name
       direction: asc

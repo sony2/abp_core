@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      tags: ano_belen
+      tags: localizacion_belen
     sort:
       field: name
       direction: asc

@@ -397,7 +397,7 @@ function abp_core_install() {
 
   $artesanos_names = [
     '1' => 'Alfonso Rodríguez',
-    '2' => 'Ángel Garayoa'.
+    '2' => 'Ángel Garayoa',
     '3' => 'Heide',
     '4' => 'Hermanos Castells',
     '5' => 'Hermanos Cerrada',
@@ -454,7 +454,7 @@ function abp_core_install() {
 
   $sizes_names = [
     '1' => '3 m x 4 m',
-    '2' => '2,7 m x 2,7 m'.
+    '2' => '2,7 m x 2,7 m',
     '3' => '2 m x 3 m',
     '4' => '2 m x 2 m',
     '5' => '2 m x 1 m',
@@ -522,7 +522,7 @@ function abp_core_install() {
 
   $types_names = [
     '1' => 'Arqueta',
-    '2' => 'Cuadro'.
+    '2' => 'Cuadro',
     '3' => 'Exento',
   ];
 
@@ -532,7 +532,7 @@ function abp_core_install() {
   ]);
   $voc->save();
 
-  $types_ids = [];
+  $belen_types_ids = [];
   // Create Tipo Belén.
   foreach ($types_names as $term_id => $term_name) {
     $term = Term::create([
@@ -540,7 +540,7 @@ function abp_core_install() {
       'name' => $term_name,
     ]);
     $term->save();
-    $types_ids[$term_id] = $term->id();
+    $belen_types_ids[$term_id] = $term->id();
   }
 
   $location_names = [
@@ -571,7 +571,7 @@ function abp_core_install() {
   ];
 
   $voc = Vocabulary::create([
-    'vid' => 'escenas',
+    'vid' => 'escena',
     'name' => "Escenas",
   ]);
   $voc->save();
@@ -580,7 +580,7 @@ function abp_core_install() {
   // Create Locations.
   foreach ($escenas_names as $term_id => $term_name) {    
     $term = Term::create([
-      'vid' => 'escenas',
+      'vid' => 'escena',
       'name' => $term_name,
     ]);
     $term->save();
@@ -764,23 +764,23 @@ function abp_core_install() {
     ],
     'field_artesanos_figuras' => [
       [
-        'target_id' => $artesanos_ids['5']->id(),
+        'target_id' => $artesanos_ids['5'],
       ],
       [
-        'target_id' => $artesanos_ids['7']->id(),
+        'target_id' => $artesanos_ids['7'],
       ],
       [
-        'target_id' => $artesanos_ids['1']->id(),
+        'target_id' => $artesanos_ids['1'],
       ],
     ],
     'field_ano_belen' => [
-      'target_id' => $years_ids['2']->id(),
+      'target_id' => $years_ids['2'],
     ],
     'field_escena' => [
-      'target_id' => $escenas_ids['2']->id(),
+      'target_id' => $escenas_ids['2'],
     ],
     'field_foto_principal' => [
-      'target_id' => $media_files['Cabecera']->id(),
+      'target_id' => $media_files['Cabecera'],
     ],
     'field_galeria' => [
       [
@@ -795,17 +795,20 @@ function abp_core_install() {
       [
         'target_id' => $media_files['Climb']->id(),
       ],
-    ]
+    ],
     'field_localizacion_belen' => [
-      'target_id' => $locations_ids['1']->id(),
+      'target_id' => $locations_ids['2],
     ],
     'field_tamano_belen' => [
-      'target_id' => $sizes_ids['2']->id(),
+      'target_id' => $sizes_ids['2'],
     ],   
     'field_tamano_figuras_belen' => [
       [
-        'target_id' => $fsizes_ids['11']->id(),
+        'target_id' => $fsizes_ids['11'],
       ],
+    ],
+    'field_tipo_belen' => [
+      'target_id' => $belen_types_ids['2],
     ],
     'field_video_belen' => [
       'target_id' => $video_entity->id(),
