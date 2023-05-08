@@ -797,7 +797,7 @@ function abp_core_install() {
       ],
     ],
     'field_localizacion_belen' => [
-      'target_id' => $locations_ids['2],
+      'target_id' => $locations_ids['2'],
     ],
     'field_tamano_belen' => [
       'target_id' => $sizes_ids['2'],
@@ -808,7 +808,7 @@ function abp_core_install() {
       ],
     ],
     'field_tipo_belen' => [
-      'target_id' => $belen_types_ids['2],
+      'target_id' => $belen_types_ids['2'],
     ],
     'field_video_belen' => [
       'target_id' => $video_entity->id(),
