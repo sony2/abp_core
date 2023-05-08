@@ -39,10 +39,13 @@ function abp_core_theme() {
     ],
     'abp_core_belen_details' => [
       'variables' => [
-        'date' => NULL,
-        'time' => NULL,
-        'location' => NULL,
-        'link' => NULL,
+        'artesanos_figuras' => NULL,
+        'ano_belen' => NULL,
+        'escena' => NULL,
+        'localizacion_belen' => NULL,
+        'tamano_belen' => NULL,
+        'tamano_figuras_belen' => NULL,
+        'tipo_belen' => NULL,
       ],
     ],
     'abp_core_newsletter' => [
