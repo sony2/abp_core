@@ -293,6 +293,8 @@ function abp_core_install() {
     ],
   ]);
 
+  $node->save();
+
   // Create contacto page.
   $node = Node::create([
     'type' => 'page',
@@ -310,6 +312,8 @@ function abp_core_install() {
     ],
   ]);
 
+  $node->save();
+  
   // Create 404 page.
   $node = Node::create([
     'type' => 'page',
