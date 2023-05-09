@@ -227,11 +227,10 @@ function abp_core_install() {
       'title' => 'Ver galería',
     ],
     'field_image' => [
-      'target_id' => $media_files['Hero']->id(),
+      'target_id' => $media_files['Cabecera']->id(),
       'alt' => 'ABP',
     ],
     'field_video' => [
-      'target_id' => $media_files['Video']->id(),
     ],
   ]);
 

@@ -46,6 +46,7 @@ function abp_core_theme() {
         'tamano_belen' => NULL,
         'tamano_figuras_belen' => NULL,
         'tipo_belen' => NULL,
+        'galeria' => NULL,
       ],
     ],
     'abp_core_newsletter' => [

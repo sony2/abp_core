@@ -96,6 +96,17 @@ class BelenDetailsBlock extends BlockBase {
       $tipo_belen = substr($tipo_belen, 0, -2);
     }
 
+    $galeria = array();
+    $fotos = $node->get('field_galeria')->referencedEntities();
+    foreach ($foto as $fotos) {
+      console.log($foto->uri());
+      $item = [];
+      $item['imagen'] = $foto->uri();
+      array_push($galeria, $item);
+    }
+    
+    console.log(galeria);
+
     $build = [
       '#theme' => 'abp_core_belen_details',
       '#artesanos_figuras' => $artesanos_figuras,
@@ -105,6 +116,7 @@ class BelenDetailsBlock extends BlockBase {
       '#tamano_belen' => $tamano_belen,
       '#tamano_figuras_belen' => $tamano_figuras_belen,
       '#tipo_belen' => $tipo_belen,
+      '#galeria' => $galeria,
     ];
 
     $build['#cache']['max-age'] = 0;
