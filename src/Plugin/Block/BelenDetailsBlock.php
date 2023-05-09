@@ -4,6 +4,7 @@ namespace Drupal\abp_core\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Url;
+use Drupal\file\Entity\File;
 
 /**
  * Provides an evbelenent details block.
@@ -98,14 +99,13 @@ class BelenDetailsBlock extends BlockBase {
 
     $galeria = array();
     $fotos = $node->get('field_galeria')->referencedEntities();
-    foreach ($foto as $fotos) {
-      console.log($foto->uri());
+    foreach ($fotos as $foto) {
       $item = [];
-      $item['imagen'] = $foto->uri();
+      $fid = $foto->field_media_image->target_id;
+      $file = File::load($fid);
+      $item['imagen'] = $file->createFileUrl();
       array_push($galeria, $item);
     }
-    
-    console.log(galeria);
 
     $build = [
       '#theme' => 'abp_core_belen_details',
